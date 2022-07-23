@@ -1,3 +1,6 @@
 [submodule "Pandemonium-Vec"]
 	path = Pandemonium-Vec
+	url = https://github.com/Alpasyon007/Pandemonium-Vec.git
+[submodule "Pandemonium-Mat"]
+	path = Pandemonium-Mat
 	url = ""
