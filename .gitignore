@@ -34,4 +34,4 @@
 # Folders
 /old
 /build
-*vscode
+/.vscode
