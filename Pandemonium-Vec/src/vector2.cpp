@@ -8,15 +8,18 @@ namespace Pandemonium {
 			// Vector2
 			// Constructor
 			Vector2::Vector2(float _x, float _y) : x(_x), y(_y) {}
+
 			Vector2::Vector2() : x(0), y(0){};
 
 			// Operators
 			// Equals
 			void Vector2::operator=(Vector2 const& v) { x = v.x, y = v.y; }
+
 			bool Vector2::operator==(Vector2 const& v) { return x == v.x && y == v.y; }
 
 			// Addition
 			Vector2 Vector2::operator+(Vector2 const& v) { return Vector2(x + v.x, y + v.y); }
+
 			void Vector2::operator+=(Vector2 const& v) {
 				x += v.x;
 				y += v.y;
@@ -24,6 +27,7 @@ namespace Pandemonium {
 
 			// Subttraction
 			Vector2 Vector2::operator-(Vector2 const& v) { return Vector2(x - v.x, y - v.y); }
+
 			void Vector2::operator-=(Vector2 const& v) {
 				x -= v.x;
 				y -= v.y;
@@ -31,6 +35,7 @@ namespace Pandemonium {
 
 			// Multiplication
 			Vector2 Vector2::operator*(int const& n) { return Vector2(x * n, y * n); }
+
 			void Vector2::operator*=(int const& n) {
 				x *= n;
 				y *= n;
@@ -38,6 +43,7 @@ namespace Pandemonium {
 
 			// Multiplication
 			Vector2 Vector2::operator/(int const& n) { return Vector2(x / n, y / n); }
+
 			void Vector2::operator/=(int const& n) {
 				x /= n;
 				y /= n;
@@ -49,7 +55,7 @@ namespace Pandemonium {
 				y = -y;
 			}
 
-			void  Vector2::Rotate(const float& ang) { RotateRad(((180 * ang) / M_PI)); }
+			void  Vector2::Rotate(const float& ang) { RotateRad(static_cast<float>((180 * ang) / M_PI)); }
 
 			float Vector2::Dot(Vector2 const& v) { return ((x * v.x) + (y * v.y)); }
 
